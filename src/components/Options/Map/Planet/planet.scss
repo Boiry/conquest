@@ -1,0 +1,25 @@
+@use '../../../../styles/vars';
+
+.options-planet {
+  display: inline-block;
+  width: var(--size1);
+  height: var(--size1);
+  border-radius: 50%;
+  &-color {
+    &-none {
+      background: vars.$neutral;
+    }
+    &-purple {
+      background: vars.$purple;
+    }
+    &-yellow {
+      background: vars.$yellow;
+    }
+    &-red {
+      background: vars.$red;
+    }
+    &-green {
+      background: vars.$green;
+    }
+  }
+}

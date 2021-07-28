@@ -1,0 +1,15 @@
+.options-map {
+  &-map {
+    padding: 1rem 0;
+  }
+  &-table {
+    line-height: 0;
+    margin: 0 auto;
+  }
+}
+
+.void {
+  display: inline-block;
+  width: var(--size1);
+  height: var(--size1);
+}

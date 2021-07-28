@@ -1,0 +1,60 @@
+@use '../../../styles/vars';
+
+.game-planet {
+  display: block;
+  width: var(--size2);
+  height: var(--size2);
+  cursor: default;
+  &-purple {
+    background-color: vars.$purple;
+  }
+  &-yellow {
+    background-color: vars.$yellow;
+  }
+  &-red {
+    background-color: vars.$red;
+  }
+  &-green {
+    background-color: vars.$green;
+  }
+  &-img {
+    position: relative;
+    width: calc(.8 * var(--size2));
+    height: calc(.8 * var(--size2));
+    top: calc(.1 * var(--size2));
+    left: calc(.1 * var(--size2));
+    background: grey;
+    border-radius: 50%;
+  }
+  &-name {
+    position: absolute;
+    margin-top: .5rem;
+  }
+  &-ships {
+    position: absolute;
+  }
+  &-transparent {
+    position: relative;
+    width: var(--size2);
+    height: var(--size2);
+    top: calc((var(--size2) - var(--size2) * 2) + .6rem);
+    &:hover {
+      background-color: white;
+      opacity: .3;
+    }
+  }
+  &-blink {
+    background-color: white;
+    opacity: 0;
+    animation: 1s linear 0s infinite alternate blink;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .5;
+  }
+}

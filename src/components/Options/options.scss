@@ -1,0 +1,78 @@
+@use "../../styles/vars";
+
+.options {
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+  &-frame {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: vars.$background;
+    border: 1px solid vars.$border;
+  }
+
+  &-players {
+    margin-right: 1rem;
+    &-color {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin-right: .5rem;
+      &-purple {
+        background: vars.$purple;
+      }
+      &-yellow {
+        background: vars.$yellow;
+      }
+      &-red {
+        background: vars.$red;
+      }
+      &-green {
+        background: vars.$green;
+      }
+    }
+  }
+
+  &-map {
+    &-draw {
+      min-width: 26rem;
+      min-height: 26rem;
+    }
+    &-inputs-table {
+      width: 100%;
+    }
+    &-inputs-table>tbody>tr {
+      height: 1.5rem;
+    }
+    &-inputs-table>tbody>tr>td {
+      width: 50%;
+    }
+    &-input {
+      width: 5rem;
+      &-td {
+        text-align: right;
+      }
+    }
+    &-button {
+      font-size: 1rem;
+    }
+  }
+
+  &-options {
+    margin-left: 1rem;
+  }
+
+  &-hr {
+    width: 80%;
+    color: vars.$neutral;
+    border: 1px solid vars.$neutral;
+  }
+  &-confirmation {
+    text-align: center;
+    &-button {
+      font-size: 1rem;
+      width: 6rem;
+    }
+  }
+}

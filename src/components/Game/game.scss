@@ -1,0 +1,150 @@
+@use '../../styles/vars';
+
+.game {
+  &-header {
+    &-button {
+      border: none;
+      border-right: 1px solid grey;
+      padding: .5rem;
+    }
+  }
+  &-command-submit-button {
+    display: none;
+  }
+  &-command form {
+    display: inline-block;
+  }
+  &-command-input {
+    width: 6rem;
+    margin: 0 1rem;
+  }
+  &-table-container {
+    width: var(--width);
+    margin: 0 auto;
+  }
+  &-table td {
+    line-height: 0;
+    border: 1px solid grey;
+  }
+  &-void {
+    width: var(--size2);
+    height: var(--size2);
+  }
+  &-infos {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .8);
+    padding: .2rem;
+    border: 1px solid grey;
+  }
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+    background: vars.$background;
+    padding: .3rem;
+    margin: .3rem;
+    border: 1px solid vars.$border;
+    border-radius: 5px;
+    font-size: .9rem;
+  }
+
+  &-popup {
+    visibility: hidden;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    &-table {
+      width: 100%;
+      max-height: 80%;
+      text-align: center;
+    }
+    &-table td {
+      border: 1px solid grey;
+      padding: .3rem;
+    }
+    &-close {
+      position: absolute;
+      bottom: 1rem;
+      width: calc(100% - 2rem);
+      text-align: center;
+    }
+    &-close button {
+      width: 6rem; 
+    }
+    &-color {
+      display: inline-block;
+      margin-right: .8rem;
+      width: .8rem;
+      height: .8rem;
+      &-none {
+        background: vars.$neutral;
+      }
+      &-purple {
+        background: vars.$purple;
+      }
+      &-yellow {
+        background: vars.$yellow;
+      }
+      &-red {
+        background: vars.$red;
+      }
+      &-green {
+        background: vars.$green;
+      }
+    }
+  }
+  &-distance-popup {
+    width: 20rem;
+    height: 8rem;
+    left: calc(100vw / 2 - 10rem);
+    top: calc(100vh / 2 - 4rem);
+    padding: 1rem;
+
+    &-button {
+      display: block;
+      width: 5rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+  }
+  &-situation-popup {
+    width: 60rem;
+    height: 20rem;
+    left: calc(100vw / 2 - 30rem);
+    top: calc(100vh / 2 - 10rem);
+  }
+  &-moves-popup {
+    width: 30rem;
+    height: 20rem;
+    left: calc(100vw / 2 - 15rem);
+    top: calc(100vh / 2 - 10rem);
+    &-scrollable {
+      height: 15rem;
+      overflow-y: auto;
+    }
+  }
+
+  &-end-popup {
+    position: absolute;
+    background: white;
+    width: 20rem;
+    height: 10rem;
+    left: calc(100vw / 2 - 10rem);
+    top: calc(100vh / 2 - 5rem);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &-footer {
+    background: vars.$background;
+    padding: .3rem;
+    margin: .5rem;
+    border: 1px solid vars.$border;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
